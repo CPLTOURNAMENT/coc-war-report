@@ -6,3 +6,6 @@ google-auth
 google-auth-oauthlib
 google-auth-httplib2
 gunicorn
+git add requirements.txt
+git commit -m "Add all required packages"
+git push
