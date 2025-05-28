@@ -4,4 +4,10 @@ version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 requires-python = ">=3.11"
+<<<<<<< HEAD
 dependencies = []
+=======
+dependencies = [
+    "flask>=3.1.1",
+]
+>>>>>>> 8351b048d01e1e19c33ad63357b453f8868610f7
