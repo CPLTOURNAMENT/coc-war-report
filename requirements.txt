@@ -1,4 +1,5 @@
 flask
 requests
+openpyxl
 google-api-python-client
 gunicorn
