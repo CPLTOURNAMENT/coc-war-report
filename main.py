@@ -1,13 +1,16 @@
-from flask import Flask, send_from_directory
+from flask import Flask, jsonify
+import os
 
-app = Flask(__name__, static_folder='static')
+app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return "Clash of Clans War Data Server Running"
+@app.route("/")
+def home():
+    return "✅ CoC War Report System Running Successfully!"
 
-@app.route('/live_war_auto_update.xlsx')
-def serve_excel():
-    return send_from_directory('static', 'live_war_auto_update.xlsx')
+@app.route("/api/test")
+def test_api():
+    return jsonify({"message": "API is working!", "status": "success"})
 
-app.run(host='0.0.0.0', port=81)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # Render uses dynamic PORT
+    app.run(host="0.0.0.0", port=port)
