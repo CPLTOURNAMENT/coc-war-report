@@ -19,7 +19,7 @@ HEADERS = {
     "Accept": "application/json"
 }
 API_BASE = 'https://api.clashofclans.com/v1'
-FILENAME = 'live_war_auto_update.xlsx'
+FILENAME = datetime.now().strftime("war_report_%Y%m%d_%H%M%S.xlsx")
 
 # === TIME FORMATTERS ===
 def format_time(time_str):
